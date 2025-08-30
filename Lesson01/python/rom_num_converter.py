@@ -58,13 +58,9 @@ def roman_num_converter(roman_value):
         # set the values
         currentNum = roman_numerals[roman_value[i]]
         nextI = i+1
-        nextII = i+2
         nextNum = 0
-        next2Num = 0
         if(nextI < len(roman_value)):
             nextNum = roman_numerals[roman_value[(nextI)]]
-        if(nextII < len(roman_value)):
-            next2Num = roman_numerals[roman_value[(nextII)]]
 
         # first time runing 
         if(previousValue == 0):
@@ -80,9 +76,9 @@ def roman_num_converter(roman_value):
             if(currentNum == previousValue):
                 output += currentNum
             # if current is bigger than the next, add it
-            elif(currentNum > nextNum and next2Num != 0):
+            elif(currentNum >= nextNum):
                 output += currentNum
-            elif(currentNum < nextNum and next2Num != 0):
+            elif(currentNum < nextNum):
                 output -= currentNum
         
         # overwrite the previousValue value
@@ -95,5 +91,5 @@ def roman_num_converter(roman_value):
 
     return str(output)
 
-# output = roman_num_converter("VIIIIDD")
-# print(output)
+#output = roman_num_converter("MDCCCLXVII")
+#print(output)
