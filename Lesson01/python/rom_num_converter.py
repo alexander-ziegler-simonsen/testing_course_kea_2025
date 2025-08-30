@@ -72,11 +72,14 @@ def roman_num_converter(roman_value):
     # the main logic loop
     for i in range(len(roman_value)):
         # set the values
-        currentNum = roman_numerals[roman_value[i]]
+        previousI = i-1
         nextI = i+1
         nextNum = 0
+        currentNum = roman_numerals[roman_value[i]]
         if(nextI < len(roman_value)):
             nextNum = roman_numerals[roman_value[(nextI)]]
+        if(i != 0):
+            previousValue = roman_numerals[roman_value[(previousI)]]
 
         # first time runing 
         if(previousValue == 0):
@@ -92,11 +95,9 @@ def roman_num_converter(roman_value):
             # if current is bigger than the next, add it
             elif(currentNum >= nextNum):
                 output += currentNum
+            # if current is smaller than the next, remove it
             elif(currentNum < nextNum):
                 output -= currentNum
-        
-        # overwrite the previousValue value
-        previousValue = currentNum
     
 
     # check if the value is bigger than Max value
