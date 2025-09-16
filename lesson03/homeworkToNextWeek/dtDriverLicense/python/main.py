@@ -1,8 +1,4 @@
 # driver license
 
-def main():
+def doStuff():
     print("Hello from python!")
-
-
-if __name__ == "__main__":
-    main()
