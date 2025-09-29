@@ -52,6 +52,31 @@ wheels = [
 ]
 
 [[package]]
+name = "currencyapicom"
+version = "0.1.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "everapi" },
+    { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/e4/e5/7dbf0afb2598984d3d0e6dbe4666381e4a1325943ac7932a8ca5d02b36ab/currencyapicom-0.1.1.tar.gz", hash = "sha256:9ccb8191f6a8579890119cda5b0b25318f7329571af652b50c9d4013c1cc4405", size = 2538 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/04/96/b6ae06ef5b1f74612d0bcdca53a6bed14c5bc88b88802302144bed77779c/currencyapicom-0.1.1-py3-none-any.whl", hash = "sha256:fb9c78adbea2fb08adec63736444e7322394d0ecb340698c766bfe49469297f7", size = 2705 },
+]
+
+[[package]]
+name = "everapi"
+version = "0.1.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/64/ff/5ede519adc76c81e4f866ceff7023a817f578ab7b1c1b643035e0edaf566/everapi-0.1.1.tar.gz", hash = "sha256:81bc2ebfe8171cfb283df86e7d32c3b14cdbf9753d41c89254c558857b70f8cf", size = 2577 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8a/33/039f7bb87a54a04e12de5e13d27ec02ec76cbe5bf65edba0c3ce67cbf751/everapi-0.1.1-py3-none-any.whl", hash = "sha256:c269c1296964ea0bea4ba307efdbaf2bd1b1b4973e4360e959e91a1cd874991f", size = 2911 },
+]
+
+[[package]]
 name = "idna"
 version = "3.10"
 source = { registry = "https://pypi.org/simple" }
@@ -117,16 +142,16 @@ name = "python"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "currencyapicom" },
     { name = "pytest" },
     { name = "python-dotenv" },
-    { name = "requests" },
 ]
 
 [package.metadata]
 requires-dist = [
+    { name = "currencyapicom", specifier = ">=0.1.1" },
     { name = "pytest", specifier = ">=8.4.2" },
     { name = "python-dotenv", specifier = ">=1.1.1" },
-    { name = "requests", specifier = ">=2.32.5" },
 ]
 
 [[package]]

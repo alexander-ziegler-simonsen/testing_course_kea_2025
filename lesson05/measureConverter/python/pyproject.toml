@@ -5,7 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "currencyapicom>=0.1.1",
     "pytest>=8.4.2",
     "python-dotenv>=1.1.1",
-    "requests>=2.32.5",
 ]
