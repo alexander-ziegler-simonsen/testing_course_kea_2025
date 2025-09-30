@@ -73,7 +73,41 @@ module.exports = defineConfig({
 this will add it to the setup, so you can use it.
 
 
-pick end-2-end testing
+### recording end-2-end testing
 
+run this 
+```bash
+npx cypress open
+```
+(which opens a new window)
 
- 
+this record part, was not that easy to find, here is the list.
+- click end-2-end
+- - pick chrome and start tests (opens new window)
+- - - click "new spec" -> create new -> give it a name -> run it
+- - - - click "studio beta" in top right corner -> "ai text" click new test -> give it a name -> click
+- - - - - now you record every step (if you are slow on the keyboard, it will be saved as wait time inbetween clicks)
+
+ ## playwright
+
+we start with this command:
+```bash
+npm init playwright@latest
+```
+
+other commands you will need
+```bash
+npx playwright test
+npx playwright show-report
+npx playwright test --ui
+
+npx playwright --version
+
+# how to update it 
+npm install -D @playwright/test@latest
+npx playwright install --with-deps
+
+# for recording tests
+npx playwright codegen
+```
+when you are using codegen, keep in mind, that you dont save a file, that is something you your self have to do after it is done.
