@@ -27,12 +27,12 @@ def fToK(value: float):
     return round(((value - 32) * (5 / 9) + 273.15), 2)
 
 def kToC(value: float):
-    output = ( ( Decimal(value) - Decimal(273.15) ) * Decimal(9 / 5) ) + Decimal(32)
-    return output.quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)
+    output = ( Decimal(value) - Decimal(273.15) )
+    return float(output.quantize(Decimal('0.01'), rounding=ROUND_HALF_UP))
 
 def kToF(value: float):
-    offSet = Decimal(value) - Decimal(273.15)
-    return offSet.quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)
+    output = ((Decimal(value) - Decimal(273.15)) * Decimal(9/5)) + Decimal(32)
+    return float(output.quantize(Decimal('0.01'), rounding=ROUND_HALF_UP))
 
 class temperatureClass:
     def __init__(self, value: float, whatType: temperatureType):

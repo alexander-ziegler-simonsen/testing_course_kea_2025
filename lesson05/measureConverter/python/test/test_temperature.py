@@ -47,7 +47,7 @@ def test_c_to_f(celsius, expected):
 
 
 @pytest.mark.parametrize("kelvin, expected", [
-    (273.15, 32),
+    (273.15, 32.00),
     (373.15, 212),
     (310.15, 98.6),
     (255.372, 0),
